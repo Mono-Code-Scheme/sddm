@@ -113,7 +113,7 @@ Item {
                         echoMode: showPassword ? TextInput.Normal : TextInput.Password
                         background: null
 
-                        Keys.onPressed: {
+                        Keys.onPressed: function (event) {
                             if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
                                 sddm.login(usernameField.text, passwordField.text, session.currentIndex);
                                 event.accepted = true;
